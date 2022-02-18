@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { UsersService } from './users.service';
 import { TheoryService } from './theory.service';
 
@@ -9,6 +9,10 @@ import { TheoryService } from './theory.service';
 })
 export class AppComponent {
   title = 'pipe-demo';
+
+  @HostListener('click') clicked() {
+    console.log('clicked');
+  }
 
   public constructor(
     public userService: UsersService,
